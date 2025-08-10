@@ -1,0 +1,10 @@
+module Base
+{
+
+    model Tiramisu
+    {
+    mesh = Foods/AF_tiramisu,
+    texture = Foods/AF_tiramisu,
+    scale = 0.009,
+    }
+}

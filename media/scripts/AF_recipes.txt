@@ -1,0 +1,39 @@
+module Base
+{
+    recipe Craft Chocotorta
+    {
+        Chocolinas=2,
+        Dulce_De_Leche,
+        Result:Chocotorta,
+        Category:Food,
+        SkillRequired:Cooking=1,
+        keep BakingTray,
+        Time:50.0,
+        Result:BakingTray,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    } 
+    recipe Empty Baking Tray
+	{
+	   destroy Chocotorta,
+
+	   Result:BakingTray,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Time:40.0,
+	   Category:Cooking,
+	   Sound:EmptyPan,
+       AllowRottenItem:true,
+	}
+    recipe Craft Pionono con Dulce de leche
+    {
+        Pionono,
+        Dulce_De_Leche,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Result:Pionono_DDL,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+    }
+
+}
