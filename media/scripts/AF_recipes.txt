@@ -1,39 +1,99 @@
 module Base
 {
-    recipe Craft Chocotorta
+    recipe Craft Flan
+    {
+        Egg=1,
+        [Recipe.GetItemTypes.Milk];7,
+        [Recipe.GetItemTypes.sugar];2,
+        Melted_Candy;2,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Flan,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,    
+    }
+    recipe Craft Flan con Dulce de Leche
+    {
+        Flan=1,
+        Cream;2,
+        Dulce_De_Leche;2,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Flan_DDL,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+    recipe Craft Pionono con Dulce de leche
+    {
+        Pionono=1,
+        Cream;3,
+        Dulce_De_Leche,
+        [Recipe.GetItemTypes.sugar];1,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Pionono_DDL,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+    recipe Craft Durazno con crema
+    {
+        Bowl=1,
+        CannedPeaches;1,
+        Cream;1,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Durazno_Cream,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+    recipe Craft Durazno con crema & Dulce de Leche
+    {
+        Dulce_De_Leche;1,
+        Durazno_Cream=1,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Durazno_Cream_Dulce_de_Leche,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+        recipe Craft Chocotorta
     {
         Chocolinas=2,
-        Dulce_De_Leche,
+        Dulce_De_Leche=1,
+        Cream=1,
+        Sugar,
         Result:Chocotorta,
         Category:Food,
         SkillRequired:Cooking=1,
         keep BakingTray,
         Time:50.0,
-        Result:BakingTray,
         InSameInventory:true,
         NeedToBeLearn:false,
         OnGiveXP:Recipe.OnGiveXP.Cooking30,
-    } 
-    recipe Empty Baking Tray
-	{
-	   destroy Chocotorta,
-
-	   Result:BakingTray,
-	   OnGiveXP:Recipe.OnGiveXP.None,
-	   Time:40.0,
-	   Category:Cooking,
-	   Sound:EmptyPan,
-       AllowRottenItem:true,
-	}
-    recipe Craft Pionono con Dulce de leche
+    }
+    recipe Craft Pastafrola de Dulce de Leche
     {
-        Pionono,
-        Dulce_De_Leche,
-        SkillRequired:Cooking=1,
+        Butter=1,
+        sugar;1,
+        Egg=1,
+        Vanilla Essence;1,
+        Flour;1,
+        Dulce_De_Leche=1,
         Time:50.0,
-        Result:Pionono_DDL,
         InSameInventory:true,
         NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
     }
+
 
 }

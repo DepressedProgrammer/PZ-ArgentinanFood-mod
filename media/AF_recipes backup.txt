@@ -1,0 +1,100 @@
+module Base
+{
+    recipe Craft Pionono con Dulce de leche
+    {
+        Pionono=1,
+        [Recipe.GetItemTypes.Cream];3,
+        Dulce_De_Leche,
+        [Recipe.GetItemTypes.Sugar];1,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Pionono_DDL,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+    recipe Craft Flan
+    {
+        eggs=1,
+        [Recipe.GetItemTypes.Milk];7,
+        [Recipe.GetItemTypes.Sugar];2,
+        [Recipe.GetItemTypes.Melted_Candy];2,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Flan,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+    recipe Craft Flan con Dulce de Leche
+    {
+        Flan=1,
+        [Recipe.GetItemTypes.Cream];2,
+        [Recipe.GetItemTypes.Dulce_De_Leche];2,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Flan_DDL,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+
+    recipe Craft Durazno con crema
+    {
+        Bowl=1,
+        [Recipe.GetItemTypes.CannedPeaches];1,
+        [Recipe.GetItemTypes.Cream];1,
+        
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Durazno_Cream,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+    recipe Craft Durazno con crema & Dulce de Leche
+    {
+        [Recipe.GetItemTypes.Dulce_De_Leche];1,
+        Durazno_Cream=1,
+        SkillRequired:Cooking=1,
+        Time:50.0,
+        Category:Food,
+        Result:Durazno_Cream,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+    recipe Craft Chocotorta
+    {
+        Chocolinas=2,
+        Dulce_De_Leche=1,
+        Cream=1,
+        Sugar,
+        Result:Chocotorta,
+        Category:Food,
+        SkillRequired:Cooking=1,
+        keep BakingTray,
+        Time:50.0,
+        InSameInventory:true,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.Cooking30,
+    }
+    recipe Empty Baking Tray
+	{
+	   destroy Chocotorta,
+
+	   Result:BakingTray,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Time:40.0,
+	   Category:Cooking,
+	   Sound:EmptyPan,
+       AllowRottenItem:true,
+	}
+
+
+
+}
