@@ -81,19 +81,7 @@ module Base
         NeedToBeLearn:false,
         OnGiveXP:Recipe.OnGiveXP.Cooking30,
     }
-    recipe Craft Pastafrola de Dulce de Leche
-    {
-        Butter=1,
-        sugar;1,
-        Egg=1,
-        Vanilla Essence;1,
-        Flour;1,
-        Dulce_De_Leche=1,
-        Time:50.0,
-        InSameInventory:true,
-        NeedToBeLearn:false,
-        OnGiveXP:Recipe.OnGiveXP.Cooking30,
-    }
+
 
 
 }
